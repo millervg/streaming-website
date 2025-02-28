@@ -1,0 +1,17 @@
+{{page-title "Home"}}
+
+<h2>Personal Streaming Service</h2>
+<p>Here are some movies we offer</p>
+
+<div class="movie-list">
+    {{#each @model as |movie|}}
+    <div class="movie">
+        <img src={{movie.poster}} alt={{movie.title}}>
+        <h4>{{movie.title}}</h4>
+        <p>Year: {{movie.year}}</p>
+        <p>Genre: {{movie.genre}}</p>
+    </div>
+    {{/each}}
+</div>
+
+{{outlet}}

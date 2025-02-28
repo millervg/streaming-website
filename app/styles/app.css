@@ -1,0 +1,90 @@
+/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffb3c6;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #ff8fab;
+    padding: 10px 0;
+}
+  
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+  
+nav ul li {
+    margin: 0 15px;
+}
+  
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+  
+.allMovies {
+    margin-top: 20px;
+    padding: 20px;
+}
+  
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+  
+video {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+  
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+    justify-items: center;
+}
+  
+.movie {
+    background: #fb6f92;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+  
+.movie img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+  
+.movie h3 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+  
+@media (max-width: 1024px) {
+    .movie-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+  
+@media (max-width: 500px) {
+    .movie-list {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
+  

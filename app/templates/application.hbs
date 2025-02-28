@@ -1,0 +1,13 @@
+{{page-title "StreamingWebsite"}}
+
+<nav>
+    <ul>
+        <li><LinkTo @route="home">Home</LinkTo></li>
+        <li><LinkTo @route="movies">Movies</LinkTo></li>
+        <li><LinkTo @route="reviews">Reviews</LinkTo></li>
+    </ul>
+</nav>
+
+<div class="allMovies">
+    {{outlet}}
+</div>
