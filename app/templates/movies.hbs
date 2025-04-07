@@ -1,15 +1,15 @@
 {{page-title "Movies"}}
 
 <h2>Movies</h2>
-
-<div class="video-container">
-    <video controls width="500">
-        <source src="/movies/spiritedaway.mp4" type="video/mp4">
-    </video>
-
-    <video controls width="500">
-        <source src="/movies/lalaland.mp4" type="video/mp4">
-    </video>
+<div>
+    {{#each this.model as |movie|}} 
+    <li>
+        <h3>{{movie}}</h3>
+        <video controls>
+            <source src="http://localhost:8000/public/movies/{{movie}}" type="video/mp4">
+        </video>
+    </li>
+    {{/each}}
 </div>
 
 {{outlet}}
