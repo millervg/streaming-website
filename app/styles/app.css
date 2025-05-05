@@ -47,6 +47,12 @@ video {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
+
+.video-player {
+    width: 320px;
+    height: 180px;
+    object-fit: cover;
+}
   
 .movie-list {
     display: grid;
@@ -87,4 +93,59 @@ video {
         grid-template-columns: repeat(1, 1fr); 
     }
 }
+
+#reviewForm {
+    background-color: #fb6f92;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+  
+#reviewForm label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
+  
+#reviewForm input[type="text"],
+#reviewForm input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+  
+#reviewForm button {
+    background-color: #ff8fab;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+#reviewForm button:hover {
+    background-color: #ff5c8a;
+}
+  
+.review-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ff8fab;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+  
   

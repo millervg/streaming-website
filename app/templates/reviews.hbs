@@ -1,14 +1,32 @@
 {{page-title "Reviews"}}
 
-<h2>Reviews</h2>
-<p>Here you will see reviews from critics or other people</p>
+<h1>Movie Review</h1>
+<form id="reviewForm">
+    <label for="movieTitle">Movie Title:</label>
+    <input type="text" id="movieTitle" name="movieTitle" required><br><br>
+        
+    <label for="movieRating">Rating (1-5):</label>
+    <input type="number" id="movieRating" name="movieRating" min="1" max="5" required><br><br>
+        
+    <button type="submit">Submit Review</button>
+</form>
 
-<form>
-    <label for="fname">Movie title:</label><br>
-    <input type="text" id="fname" name="fname" value="Ex: La La Land"><br>
-    <label for="lname">Rating(out of 5):</label><br>
-    <input type="text" id="lname" name="lname" value="Ex: 5"><br><br>
-    <input type="submit" value="Submit">
-</form> 
+<div class="review-container" id="reviewContainer">Here are your reviews:</div>
+
+<script>
+    document.getElementById('reviewForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const movieTitle = document.getElementById('movieTitle').value;
+        const movieRating = document.getElementById('movieRating').value;
+        const reviewContainer = document.getElementById('reviewContainer');
+        const reviewDiv = document.createElement('div');
+        reviewDiv.innerHTML = `<strong>${movieTitle}</strong><br>Rating: ${movieRating}/5`;
+        reviewContainer.appendChild(reviewDiv);
+
+        document.getElementById('movieTitle').value = '';
+        document.getElementById('movieRating').value = '';
+    });
+</script>
 
 {{outlet}}
